@@ -1,6 +1,9 @@
-const {Tilda, CanvasRenderer} = require('./tilda.js');
+import Tilda from '../../../src/tilda'
 
-const queryString = require('query-string');
+import CanvasRenderer from '../../../src/renderers/canvas'
+
+import queryString from 'query-string';
+
 window.addEventListener('load', () => {
     var canvasRenderer = new CanvasRenderer(document.querySelector('canvas'));
 	var game = new Tilda(canvasRenderer);

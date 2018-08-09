@@ -2,12 +2,13 @@
   "name": "tilda",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src --out-dir lib",
+    "prepublish": "npm run clean && npm run build"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Alexander Forselius <alexander.forselius@buddhalow.com>",
+  "license": "MIT",
   "dependencies": {
     "babelify": "^7.2.0",
     "body-parser": "^1.15.0",
