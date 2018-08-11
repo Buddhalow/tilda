@@ -5,6 +5,11 @@ import Level from './level'
 import * as constants from './constants'
 import { wrapText } from './utils'
 
+export * from './entities'
+export * from './renderer'
+export * from './level'
+export * from './sentence'
+
 export default class Tilda {
 	dispatchEvent(event) {
 		if (this.hasOwnProperty('on' + event.type) && this['on' + event.type] instanceof Function) {

@@ -1,0 +1,28 @@
+{
+  "name": "tilda-example",
+  "version": "0.2.8",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --inline",
+    "build": "webpack --mode development",
+    "deploy": "gh-pages -d demo/dist"
+  },
+  "main": "lib/index.js",
+  "devDependencies": {
+    "babel-cli": "^6.6.5",
+    "babel-eslint": "^7.2.1",
+    "eslint": "^3.19.0",
+    "eslint-plugin-react": "^6.10.3",
+    "html-webpack-plugin": "^3.2.0",
+    "rimraf": "^2.5.2",
+    "webpack": "^4.16.3",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "events": "^3.0.0",
+    "gh-pages": "^1.2.0",
+    "gh-pages-webpack-plugin": "^1.0.2",
+    "window": "^4.2.5"
+  }
+}

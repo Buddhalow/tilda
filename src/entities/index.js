@@ -1,3 +1,7 @@
+export * from './character'
+export * from './player'
+export * from './supplement'
+
 export default class Entity {
 	constructor(game, level) {
 		this.level = level;

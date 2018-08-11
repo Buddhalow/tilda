@@ -1,8 +1,9 @@
-import Tilda from './tilda'
+import Tilda from '../../../src/tilda'
 
-import CanvasRenderer from './renderers/canvas'
+import CanvasRenderer from '../../../src/renderers/canvas'
 
 import queryString from 'query-string';
+
 window.addEventListener('load', () => {
     var canvasRenderer = new CanvasRenderer(document.querySelector('canvas'));
 	var game = new Tilda(canvasRenderer);
