@@ -1,11 +1,14 @@
-import Tilda from '../../../src/tilda'
+import Tilda from '../../src'
 
-import CanvasRenderer from '../../../src/renderers/canvas'
+import CanvasRenderer from 'tilda-canvas'
 
 import queryString from 'query-string';
 
 window.addEventListener('load', () => {
-    var canvasRenderer = new CanvasRenderer(document.querySelector('canvas'));
+	let canvasElm = document.createElement('canvas')
+	document.body.appendChild(canvasElm)
+    var canvasRenderer = new CanvasRenderer(canvasElm.getContext('2d'));
+	
 	var game = new Tilda(canvasRenderer);
 	
 	var path = window.location.pathname.substr(1).split(/\//g);
@@ -23,7 +26,7 @@ window.addEventListener('load', () => {
 	var dockManager = new dockspawn.DockManager(document.querySelector("body"));
 	dockManager.initialize();
 
-	var canvas = new dockspawn.PanelContainer(document.querySelector("#canvas"), dockManager);
+	var canvas = new dockspawn.PanelContainer(document.querySelector("canvas"), dockManager);
 	var scriptEditor = new dockspawn.PanelContainer(document.querySelector("#scriptWindow"), dockManager);
 	var propertiesEditor = new dockspawn.PanelContainer(document.querySelector("#properties"), dockManager);
 	var toolbox = new dockspawn.PanelContainer(document.querySelector("#toolbar"), dockManager);

@@ -1,3 +1,9 @@
+export * from './entities'
+export * from './renderer'
+export * from './level'
+export * from './sentence'
+
+
 import PlayerEntity from './entities/player'
 import CharacterEntity from './entities/character'
 import Block from './block'
@@ -5,10 +11,6 @@ import Level from './level'
 import * as constants from './constants'
 import { wrapText } from './utils'
 
-export * from './entities'
-export * from './renderer'
-export * from './level'
-export * from './sentence'
 
 export default class Tilda {
 	dispatchEvent(event) {

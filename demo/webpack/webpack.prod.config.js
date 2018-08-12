@@ -3,10 +3,14 @@ const webpack = require('webpack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
-  entry: [path.join(__dirname, '../src/js/index')],
+  entry: [
+    // 'webpack-hot-middleware/client',
+    'babel-polyfill',
+    path.join(__dirname, '../src/index'),
+  ],
   output: {
-    path: path.join(__dirname, '../lib/'),
-    filename: 'tilda.js',
+    path: path.join(__dirname, '../src/index'),
+    filename: 'bundle.js',
     publicPath: '/',
   },
   module: {
